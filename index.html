@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Universe</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🎬 Movie<span>Universe</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#coming">Coming Soon</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search movies...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Experience Movies Like Never Before</h1>
+
+            <p>
+                Explore blockbuster movies, watch trailers,
+                discover upcoming releases and enjoy a cinematic experience.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="watch-btn">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Trailer
+                </button>
+
+                <button class="explore-btn">
+                    Explore Movies
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Trending Movies -->
+
+    <section class="movies" id="trending">
+
+        <h2>🔥 Trending Movies</h2>
+
+        <div class="movie-container">
+            <!-- Movie Card 1 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" alt="Interstellar">
+
+    <div class="movie-info">
+        <h3>Interstellar</h3>
+        <p>⭐ 8.7 | Sci-Fi</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/zSWdZVtXT7E">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+<!-- Movie Card 2 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="Batman">
+
+    <div class="movie-info">
+        <h3>The Batman</h3>
+        <p>⭐ 7.8 | Action</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/mqqft2x_Aa4">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+<!-- Movie Card 3 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar">
+
+    <div class="movie-info">
+        <h3>Avatar</h3>
+        <p>⭐ 7.9 | Adventure</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/d9MyW72ELq0">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+<!-- Movie Card 4 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/d5NXSklXo0qyIYkgV94XAgMIckC.jpg" alt="Dune">
+
+    <div class="movie-info">
+        <h3>Dune</h3>
+        <p>⭐ 8.0 | Sci-Fi</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/n9xhJrPXop4">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+<!-- Movie Card 5 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man">
+
+    <div class="movie-info">
+        <h3>Spider-Man</h3>
+        <p>⭐ 8.4 | Marvel</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/JfVOs4VSpmA">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+<!-- Movie Card 6 -->
+<div class="movie-card">
+    <img src="https://image.tmdb.org/t/p/original/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg" alt="Joker">
+
+    <div class="movie-info">
+        <h3>Joker</h3>
+        <p>⭐ 8.4 | Crime</p>
+
+        <button class="trailer-btn"
+            data-video="https://www.youtube.com/embed/zAGVQLHvwOY">
+            ▶ Watch Trailer
+        </button>
+    </div>
+</div>
+
+</div>
+</section>
+<!-- Trailer Popup -->
+
+<div class="modal" id="trailerModal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <iframe id="videoFrame"
+            width="100%"
+            height="450"
+            src=""
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
+<!-- Coming Soon Section -->
+
+<section class="coming-soon" id="coming">
+
+    <h2>🎥 Coming Soon</h2>
+
+    <div class="coming-container">
+
+        <div class="coming-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4YGCnkTtV49bbp3cvYc49Ey5eGTWksbZa1ieNrQwxmg&s=10" alt="Spirit">
+            <h3>Avengers: Doomsday</h3>
+            <p>Release: December 2026</p>
+        </div>
+
+        <div class="coming-card">
+            <img src="https://i.ytimg.com/vi/8TZMtslA3UY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCRAi6P3goOQ1ANdkDgc1iwh1qPgQ" alt="Spiderman">
+            <h3>Superman</h3>
+            <p>Release: Coming Soon</p>
+        </div>
+
+        <div class="coming-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMRTDk8e8q1bAOCAK91CZofNDuf1wYMVOYwZJQlNWazw&s=10" alt="Dragon">
+            <h3>Fantastic Four</h3>
+            <p>Release: Coming Soon</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer id="contact">
+
+    <div class="footer-content">
+
+        <h2>🎬 Movie Universe</h2>
+
+        <p>
+            Discover. Watch. Enjoy.
+        </p>
+
+        <div class="social-icons">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Movie Universe. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
